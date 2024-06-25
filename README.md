@@ -12,7 +12,7 @@
 Install the library using npm:
 
 ```bash
-npm install cbe-verifier
+npm install @jvhaile/cbe-verifier
 ```
 
 ## Usage
