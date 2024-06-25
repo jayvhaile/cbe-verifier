@@ -1,0 +1,36 @@
+{
+  "name": "@jvhaile/cbe-verifier",
+  "version": "1.0.0",
+  "description": "",
+  "lib": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "compile": "tsc",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/vision": "^4.1.0",
+    "axios": "^1.6.8",
+    "jsqr": "^1.4.0",
+    "pdf-text-reader": "^4.0.1",
+    "pngjs": "^7.0.0",
+    "sharp": "^0.33.2"
+  },
+  "peerDependencies": {
+    "purify-ts": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.30",
+    "@types/pngjs": "^6.0.4",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "typedoc": "^0.26.2"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  }
+}
