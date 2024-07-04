@@ -1,6 +1,6 @@
 {
   "name": "@jvhaile/cbe-verifier",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript library for verifying Commercial Bank of Ethiopia transactions and detecting transaction IDs from screenshots.",
   "main": "dist/index.js",
   "scripts": {

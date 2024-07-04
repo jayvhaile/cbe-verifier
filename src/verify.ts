@@ -60,7 +60,10 @@ const validateAccNo = (accNo: any): string => {
 
 function processResultText(text: string): VerifySuccess {
     const extractValue = (regex: RegExp, txt: string) => regex.exec(txt)?.groups?.['value']
-    const amount = extractValue(/ETB(?<value>\d+\.\d+)/, text)
+    const amount = [
+        extractValue(/ETB(?<value>[\d,]+\.\d+)/, text),
+        extractValue(/Amount (?<value>[\d,]+\.\d+) ETB/, text)
+    ].find(it => it != undefined)
     const payer = extractValue(/Payer (?<value>\w+ \w+ \w+)/, text)
     const payerAccount = extractValue(/Payer \w+ \w+ \w+\s*Account (?<value>1\*+\d{3})/, text)
     const receiver = extractValue(/Receiver (?<value>\w+ \w+ \w+)/, text)
